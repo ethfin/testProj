@@ -29,6 +29,8 @@ Partial Class frmLogin
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2TextBox1
@@ -130,12 +132,22 @@ Partial Class frmLogin
         Me.Guna2HtmlLabel1.TabIndex = 11
         Me.Guna2HtmlLabel1.Text = "Sign In"
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(363, 12)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(427, 423)
+        Me.Guna2PictureBox1.TabIndex = 12
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(802, 447)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
@@ -146,6 +158,7 @@ Partial Class frmLogin
         Me.MinimizeBox = False
         Me.Name = "frmLogin"
         Me.Text = "Login Form"
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,4 +169,5 @@ Partial Class frmLogin
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class
