@@ -7,8 +7,6 @@ Public Class frmSignUp
             ' If validation is successful, proceed with the sign-up process
             ' (e.g., save the data to the database)
             InsertUserData()
-            Me.Hide()
-            frmLogin.Show()
         End If
     End Sub
 
@@ -19,7 +17,11 @@ Public Class frmSignUp
            String.IsNullOrWhiteSpace(txtLastName.Text) OrElse
            String.IsNullOrWhiteSpace(txtEmail.Text) OrElse
            String.IsNullOrWhiteSpace(txtPassword.Text) OrElse
-           String.IsNullOrWhiteSpace(txtReenterPassword.Text) Then
+           String.IsNullOrWhiteSpace(txtReenterPassword.Text) OrElse
+           String.IsNullOrWhiteSpace(txtAnswerQ1.Text) OrElse
+           String.IsNullOrWhiteSpace(txtAnswerQ2.Text) OrElse
+           String.IsNullOrWhiteSpace(cmbSecurityQ1.Text) OrElse
+           String.IsNullOrWhiteSpace(cmbSecurityQ2.Text) Then
             MessageBox.Show("Please fill in all fields.")
             Return False
         End If
@@ -36,7 +38,6 @@ Public Class frmSignUp
         Return True
     End Function
 
-    ' Function to save user data (stub for demonstration)
     Private Sub InsertUserData()
         ' Use the Common class to get the database connection
         Dim conn As MySqlConnection = Common.getDBConnectionX()
@@ -76,6 +77,8 @@ Public Class frmSignUp
             If conn IsNot Nothing Then
                 conn.Close()
             End If
+            Me.Hide()
+            frmLogin.Show()
         End Try
     End Sub
 End Class
