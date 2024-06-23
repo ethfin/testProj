@@ -1,4 +1,4 @@
-﻿
+﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
 Public Class Common
     Public Shared myDBConnection As MySqlConnection
