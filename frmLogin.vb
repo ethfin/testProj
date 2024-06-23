@@ -54,12 +54,14 @@ Public Class frmLogin
 
                 Me.Hide()
             Else
-                MessageBox.Show("Invalid username or password.")
+                lblIncorrect.Text = "Invalid username or password."
+                lblIncorrect.Show()
             End If
 
         Catch ex As Exception
             ' Handle any errors that occur
-            MessageBox.Show("Error: " & ex.Message)
+            lblIncorrect.Text = "Error: " & ex.Message
+            lblIncorrect.Show()
         Finally
             ' Close the connection whether or not an error occurred
             If conn IsNot Nothing Then
@@ -68,7 +70,7 @@ Public Class frmLogin
         End Try
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+    Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles btnRegister.Click
         Me.Hide()
         frmSignUp.Show()
     End Sub
