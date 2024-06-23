@@ -81,4 +81,16 @@ Public Class frmSignUp
             frmLogin.Show()
         End Try
     End Sub
+
+    Private Sub cmbSecurityQ1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbSecurityQ2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtAnswerQ1_TextChanged(sender As Object, e As EventArgs) Handles txtAnswerQ1.TextChanged
+
+    End Sub
 End Class
