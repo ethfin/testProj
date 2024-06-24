@@ -35,7 +35,7 @@ Partial Class frmSignUp
         Me.txtAnswerQ2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSignIn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblSignInNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
@@ -269,26 +269,26 @@ Partial Class frmSignUp
         Me.txtUsername.Size = New System.Drawing.Size(256, 36)
         Me.txtUsername.TabIndex = 22
         '
-        'Guna2Button1
+        'btnSignIn
         '
-        Me.Guna2Button1.BorderRadius = 5
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(119, 299)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button1.TabIndex = 23
-        Me.Guna2Button1.Text = "Sign In"
+        Me.btnSignIn.BorderRadius = 5
+        Me.btnSignIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSignIn.FillColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSignIn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.btnSignIn.ForeColor = System.Drawing.Color.White
+        Me.btnSignIn.Location = New System.Drawing.Point(119, 299)
+        Me.btnSignIn.Name = "btnSignIn"
+        Me.btnSignIn.Size = New System.Drawing.Size(180, 45)
+        Me.btnSignIn.TabIndex = 23
+        Me.btnSignIn.Text = "Sign In"
         '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.PapayaWhip
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
+        Me.Guna2Panel1.Controls.Add(Me.btnSignIn)
         Me.Guna2Panel1.Controls.Add(Me.lblSignInNotice)
         Me.Guna2Panel1.Location = New System.Drawing.Point(557, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -348,7 +348,7 @@ Partial Class frmSignUp
     Friend WithEvents txtAnswerQ2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSignIn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblSignInNotice As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
