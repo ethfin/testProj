@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports BCrypt.Net.BCrypt
+Imports BC = BCrypt.Net.BCrypt
 
 Public Class frmSignUp
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
@@ -55,7 +55,7 @@ Public Class frmSignUp
                 cmd.Parameters.AddWithValue("@lastName", txtLastName.Text)
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text)
                 ' Hash the password using BCrypt before inserting it into the database
-                Dim hashedPassword As String = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text)
+                Dim hashedPassword As String = BC.HashPassword(txtPassword.Text)
                 cmd.Parameters.AddWithValue("@password", hashedPassword) ' Now using hashed password
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text)
                 cmd.Parameters.AddWithValue("@securityQuestion1", cmbSecurityQ1.Text)

@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports BCrypt.Net.BCrypt
+Imports BC = BCrypt.Net.BCrypt
 
 Public Class frmLogin
 
@@ -36,7 +36,7 @@ Public Class frmLogin
                 Dim hashedPassword As String = reader("password").ToString()
 
                 ' Verify the entered password against the hashed password
-                Dim isValidPassword As Boolean = BCrypt.Net.BCrypt.Verify(password, hashedPassword)
+                Dim isValidPassword As Boolean = BC.Verify(password, hashedPassword)
 
                 ' Check if the password is correct
                 If isValidPassword Then
