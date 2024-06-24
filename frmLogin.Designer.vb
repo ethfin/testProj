@@ -24,8 +24,8 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblRegisterNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnRegister = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblRegisterNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtUser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2GradientTileButton()
@@ -46,18 +46,6 @@ Partial Class frmLogin
         Me.Guna2Panel1.Size = New System.Drawing.Size(328, 447)
         Me.Guna2Panel1.TabIndex = 12
         '
-        'lblRegisterNotice
-        '
-        Me.lblRegisterNotice.AutoSize = False
-        Me.lblRegisterNotice.BackColor = System.Drawing.Color.Transparent
-        Me.lblRegisterNotice.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegisterNotice.ForeColor = System.Drawing.Color.GhostWhite
-        Me.lblRegisterNotice.Location = New System.Drawing.Point(38, 47)
-        Me.lblRegisterNotice.Name = "lblRegisterNotice"
-        Me.lblRegisterNotice.Size = New System.Drawing.Size(262, 81)
-        Me.lblRegisterNotice.TabIndex = 1
-        Me.lblRegisterNotice.Text = "Haven’t made an account yet?"
-        '
         'btnRegister
         '
         Me.btnRegister.BorderRadius = 5
@@ -73,6 +61,18 @@ Partial Class frmLogin
         Me.btnRegister.Size = New System.Drawing.Size(180, 45)
         Me.btnRegister.TabIndex = 2
         Me.btnRegister.Text = "Register"
+        '
+        'lblRegisterNotice
+        '
+        Me.lblRegisterNotice.AutoSize = False
+        Me.lblRegisterNotice.BackColor = System.Drawing.Color.Transparent
+        Me.lblRegisterNotice.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegisterNotice.ForeColor = System.Drawing.Color.GhostWhite
+        Me.lblRegisterNotice.Location = New System.Drawing.Point(38, 47)
+        Me.lblRegisterNotice.Name = "lblRegisterNotice"
+        Me.lblRegisterNotice.Size = New System.Drawing.Size(262, 81)
+        Me.lblRegisterNotice.TabIndex = 1
+        Me.lblRegisterNotice.Text = "Haven’t made an account yet?"
         '
         'txtUser
         '

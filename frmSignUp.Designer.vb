@@ -34,9 +34,11 @@ Partial Class frmSignUp
         Me.txtAnswerQ1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtAnswerQ2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblSignInNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtFirstName
@@ -50,13 +52,13 @@ Partial Class frmSignUp
         Me.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstName.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFirstName.Location = New System.Drawing.Point(14, 90)
-        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtFirstName.Location = New System.Drawing.Point(10, 73)
+        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFirstName.PlaceholderText = "First Name"
         Me.txtFirstName.SelectedText = ""
-        Me.txtFirstName.Size = New System.Drawing.Size(342, 44)
+        Me.txtFirstName.Size = New System.Drawing.Size(256, 36)
         Me.txtFirstName.TabIndex = 0
         '
         'txtLastName
@@ -70,13 +72,13 @@ Partial Class frmSignUp
         Me.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastName.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLastName.Location = New System.Drawing.Point(14, 142)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtLastName.Location = New System.Drawing.Point(10, 115)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLastName.PlaceholderText = "Last Name"
         Me.txtLastName.SelectedText = ""
-        Me.txtLastName.Size = New System.Drawing.Size(342, 44)
+        Me.txtLastName.Size = New System.Drawing.Size(256, 36)
         Me.txtLastName.TabIndex = 1
         '
         'txtEmail
@@ -90,13 +92,13 @@ Partial Class frmSignUp
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(384, 90)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEmail.Location = New System.Drawing.Point(288, 73)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderText = "Email"
         Me.txtEmail.SelectedText = ""
-        Me.txtEmail.Size = New System.Drawing.Size(320, 44)
+        Me.txtEmail.Size = New System.Drawing.Size(240, 36)
         Me.txtEmail.TabIndex = 2
         '
         'txtPassword
@@ -110,13 +112,13 @@ Partial Class frmSignUp
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(384, 144)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPassword.Location = New System.Drawing.Point(288, 117)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
-        Me.txtPassword.Size = New System.Drawing.Size(320, 44)
+        Me.txtPassword.Size = New System.Drawing.Size(240, 36)
         Me.txtPassword.TabIndex = 3
         '
         'txtReenterPassword
@@ -130,13 +132,13 @@ Partial Class frmSignUp
         Me.txtReenterPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtReenterPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtReenterPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtReenterPassword.Location = New System.Drawing.Point(384, 196)
-        Me.txtReenterPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtReenterPassword.Location = New System.Drawing.Point(288, 159)
+        Me.txtReenterPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtReenterPassword.Name = "txtReenterPassword"
         Me.txtReenterPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtReenterPassword.PlaceholderText = "Re-enter Password"
         Me.txtReenterPassword.SelectedText = ""
-        Me.txtReenterPassword.Size = New System.Drawing.Size(320, 44)
+        Me.txtReenterPassword.Size = New System.Drawing.Size(240, 36)
         Me.txtReenterPassword.TabIndex = 4
         '
         'cmbSecurityQ1
@@ -150,10 +152,9 @@ Partial Class frmSignUp
         Me.cmbSecurityQ1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSecurityQ1.ItemHeight = 30
         Me.cmbSecurityQ1.Items.AddRange(New Object() {"What's the name of your pet?", "What's your favorite color?", "What's your lucky number?"})
-        Me.cmbSecurityQ1.Location = New System.Drawing.Point(13, 303)
-        Me.cmbSecurityQ1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbSecurityQ1.Location = New System.Drawing.Point(10, 246)
         Me.cmbSecurityQ1.Name = "cmbSecurityQ1"
-        Me.cmbSecurityQ1.Size = New System.Drawing.Size(343, 36)
+        Me.cmbSecurityQ1.Size = New System.Drawing.Size(258, 36)
         Me.cmbSecurityQ1.TabIndex = 5
         '
         'cmbSecurityQ2
@@ -167,20 +168,18 @@ Partial Class frmSignUp
         Me.cmbSecurityQ2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSecurityQ2.ItemHeight = 30
         Me.cmbSecurityQ2.Items.AddRange(New Object() {"What's the name of your pet?", "What's your favorite color?", "What's your lucky number?"})
-        Me.cmbSecurityQ2.Location = New System.Drawing.Point(13, 394)
-        Me.cmbSecurityQ2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbSecurityQ2.Location = New System.Drawing.Point(10, 320)
         Me.cmbSecurityQ2.Name = "cmbSecurityQ2"
-        Me.cmbSecurityQ2.Size = New System.Drawing.Size(343, 36)
+        Me.cmbSecurityQ2.Size = New System.Drawing.Size(258, 36)
         Me.cmbSecurityQ2.TabIndex = 6
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(14, 277)
-        Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(10, 225)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(134, 21)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(105, 18)
         Me.Guna2HtmlLabel1.TabIndex = 7
         Me.Guna2HtmlLabel1.Text = "Security Question 1"
         '
@@ -188,10 +187,9 @@ Partial Class frmSignUp
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(14, 368)
-        Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(10, 299)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(134, 21)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(105, 18)
         Me.Guna2HtmlLabel2.TabIndex = 8
         Me.Guna2HtmlLabel2.Text = "Security Question 2"
         '
@@ -206,13 +204,13 @@ Partial Class frmSignUp
         Me.txtAnswerQ1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAnswerQ1.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtAnswerQ1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAnswerQ1.Location = New System.Drawing.Point(384, 303)
-        Me.txtAnswerQ1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtAnswerQ1.Location = New System.Drawing.Point(288, 246)
+        Me.txtAnswerQ1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAnswerQ1.Name = "txtAnswerQ1"
         Me.txtAnswerQ1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAnswerQ1.PlaceholderText = "Answer"
         Me.txtAnswerQ1.SelectedText = ""
-        Me.txtAnswerQ1.Size = New System.Drawing.Size(320, 44)
+        Me.txtAnswerQ1.Size = New System.Drawing.Size(240, 36)
         Me.txtAnswerQ1.TabIndex = 9
         '
         'txtAnswerQ2
@@ -226,13 +224,13 @@ Partial Class frmSignUp
         Me.txtAnswerQ2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAnswerQ2.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtAnswerQ2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAnswerQ2.Location = New System.Drawing.Point(384, 394)
-        Me.txtAnswerQ2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtAnswerQ2.Location = New System.Drawing.Point(288, 320)
+        Me.txtAnswerQ2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAnswerQ2.Name = "txtAnswerQ2"
         Me.txtAnswerQ2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAnswerQ2.PlaceholderText = "Answer"
         Me.txtAnswerQ2.SelectedText = ""
-        Me.txtAnswerQ2.Size = New System.Drawing.Size(320, 44)
+        Me.txtAnswerQ2.Size = New System.Drawing.Size(240, 36)
         Me.txtAnswerQ2.TabIndex = 10
         '
         'btnSignUp
@@ -245,23 +243,11 @@ Partial Class frmSignUp
         Me.btnSignUp.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnSignUp.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(243, 466)
-        Me.btnSignUp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSignUp.Location = New System.Drawing.Point(182, 379)
         Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(240, 55)
+        Me.btnSignUp.Size = New System.Drawing.Size(180, 45)
         Me.btnSignUp.TabIndex = 12
         Me.btnSignUp.Text = "Sign Up"
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(743, 0)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(536, 559)
-        Me.Guna2PictureBox1.TabIndex = 21
-        Me.Guna2PictureBox1.TabStop = False
         '
         'txtUsername
         '
@@ -274,23 +260,60 @@ Partial Class frmSignUp
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.Location = New System.Drawing.Point(14, 193)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUsername.Location = New System.Drawing.Point(10, 157)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.PlaceholderText = "Username"
         Me.txtUsername.SelectedText = ""
-        Me.txtUsername.Size = New System.Drawing.Size(342, 44)
+        Me.txtUsername.Size = New System.Drawing.Size(256, 36)
         Me.txtUsername.TabIndex = 22
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BorderRadius = 5
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Location = New System.Drawing.Point(119, 299)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button1.TabIndex = 23
+        Me.Guna2Button1.Text = "Sign In"
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.PapayaWhip
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
+        Me.Guna2Panel1.Controls.Add(Me.lblSignInNotice)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(557, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(402, 454)
+        Me.Guna2Panel1.TabIndex = 24
+        '
+        'lblSignInNotice
+        '
+        Me.lblSignInNotice.AutoSize = False
+        Me.lblSignInNotice.BackColor = System.Drawing.Color.Transparent
+        Me.lblSignInNotice.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSignInNotice.Location = New System.Drawing.Point(60, 89)
+        Me.lblSignInNotice.Name = "lblSignInNotice"
+        Me.lblSignInNotice.Size = New System.Drawing.Size(293, 77)
+        Me.lblSignInNotice.TabIndex = 25
+        Me.lblSignInNotice.Text = "Already Made " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "an Account?"
+        Me.lblSignInNotice.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmSignUp
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(1279, 559)
+        Me.ClientSize = New System.Drawing.Size(959, 454)
         Me.Controls.Add(Me.txtUsername)
-        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.btnSignUp)
         Me.Controls.Add(Me.txtAnswerQ2)
         Me.Controls.Add(Me.txtAnswerQ1)
@@ -303,10 +326,10 @@ Partial Class frmSignUp
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.txtFirstName)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Name = "frmSignUp"
         Me.Text = "Sign Up Form"
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -324,6 +347,8 @@ Partial Class frmSignUp
     Friend WithEvents txtAnswerQ1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtAnswerQ2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblSignInNotice As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

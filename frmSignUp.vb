@@ -93,4 +93,17 @@ Public Class frmSignUp
     Private Sub txtAnswerQ1_TextChanged(sender As Object, e As EventArgs) Handles txtAnswerQ1.TextChanged
 
     End Sub
+
+    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel3_Click(sender As Object, e As EventArgs) Handles lblSignInNotice.Click
+
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Me.Hide()
+        frmLogin.Show()
+    End Sub
 End Class
