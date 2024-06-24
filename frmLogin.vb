@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports BCrypt.Net.BCrypt
 
 Public Class frmLogin
 
@@ -6,34 +7,53 @@ Public Class frmLogin
         Dim username As String = txtUser.Text
         Dim password As String = txtPass.Text
 
+        ' Validate input
+        If String.IsNullOrEmpty(username) Or String.IsNullOrEmpty(password) Then
+            lblIncorrect.Text = "Username and password cannot be empty."
+            lblIncorrect.Show()
+            Exit Sub
+        End If
+
         Dim conn As MySqlConnection = Common.getDBConnectionX()
 
         Try
             ' Open the connection
             conn.Open()
 
-            ' SQL query to check if the user exists with the given username and password
-            Dim query As String = "SELECT COUNT(*) FROM dbaccounts WHERE username = @username AND password = @password"
+            ' SQL query to get the hashed password from the database for the given username
+            Dim query As String = "SELECT password FROM dbaccounts WHERE username = @username"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
 
             ' Use parameters to prevent SQL injection
             cmd.Parameters.AddWithValue("@username", username)
-            cmd.Parameters.AddWithValue("@password", password)
 
             ' Execute the query and get the result
-            Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-            ' Check if the user exists
-            If result > 0 Then
-                MessageBox.Show("Login successful!")
-                ' Proceed to the next form or main application window
-                frmMain.Show()
+            ' Check if a row was returned
+            If reader.Read() Then
+                ' Retrieve the hashed password from the database
+                Dim hashedPassword As String = reader("password").ToString()
 
-                Me.Hide()
+                ' Verify the entered password against the hashed password
+                Dim isValidPassword As Boolean = BCrypt.Net.BCrypt.Verify(password, hashedPassword)
+
+                ' Check if the password is correct
+                If isValidPassword Then
+                    MessageBox.Show("Login successful!")
+                    ' Proceed to the next form or main application window
+                    frmMain.Show()
+                    Me.Hide()
+                Else
+                    lblIncorrect.Text = "Invalid username or password."
+                    lblIncorrect.Show()
+                End If
             Else
                 lblIncorrect.Text = "Invalid username or password."
                 lblIncorrect.Show()
             End If
+
+            reader.Close()
 
         Catch ex As Exception
             ' Handle any errors that occur
