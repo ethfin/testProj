@@ -1,6 +1,29 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmLogin
+    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Guna2HtmlLabel1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUser.Text
@@ -13,7 +36,7 @@ Public Class frmLogin
             conn.Open()
 
             ' SQL query to check if the user exists with the given username and password
-            Dim query As String = "SELECT COUNT(*) FROM dbaccounts WHERE username = @username AND password = @password"
+            Dim query As String = "SELECT COUNT(*) FROM accounts WHERE username = @username AND password = @password"
             Dim cmd As MySqlCommand = New MySqlCommand(query, conn)
 
             ' Use parameters to prevent SQL injection
@@ -50,5 +73,9 @@ Public Class frmLogin
     Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles btnRegister.Click
         Me.Hide()
         frmSignUp.Show()
+    End Sub
+
+    Private Sub lblRegisterNotice_Click(sender As Object, e As EventArgs) Handles lblRegisterNotice.Click
+
     End Sub
 End Class
