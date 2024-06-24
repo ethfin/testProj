@@ -327,7 +327,10 @@ Partial Class frmSignUp
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.txtFirstName)
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmSignUp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign Up Form"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)

@@ -188,9 +188,10 @@ Partial Class frmLogin
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login Form"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
