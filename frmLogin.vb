@@ -3,7 +3,7 @@ Imports BC = BCrypt.Net.BCrypt
 
 Public Class frmLogin
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub fcnLogin()
         Dim username As String = txtUser.Text
         Dim password As String = txtPass.Text
 
@@ -65,6 +65,22 @@ Public Class frmLogin
                 conn.Close()
             End If
         End Try
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        fcnLogin()
+    End Sub
+
+    Private Sub txtUser_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles txtUser.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            fcnLogin()
+        End If
+    End Sub
+
+    Private Sub txtPass_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles txtPass.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            fcnLogin()
+        End If
     End Sub
 
     Private Sub Guna2Button1_Click_1(sender As Object, e As EventArgs) Handles btnRegister.Click
