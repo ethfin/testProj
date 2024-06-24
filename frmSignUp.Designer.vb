@@ -38,6 +38,7 @@ Partial Class frmSignUp
         Me.btnSignIn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblSignInNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -317,12 +318,27 @@ Partial Class frmSignUp
         Me.lblSignInNotice.Text = "Already Made " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "an Account?"
         Me.lblSignInNotice.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblIncorrect
+        '
+        Me.lblIncorrect.AutoSize = False
+        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
+        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
+        Me.lblIncorrect.Location = New System.Drawing.Point(140, 12)
+        Me.lblIncorrect.Name = "lblIncorrect"
+        Me.lblIncorrect.Size = New System.Drawing.Size(276, 54)
+        Me.lblIncorrect.TabIndex = 25
+        Me.lblIncorrect.Text = "ERROR"
+        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIncorrect.Visible = False
+        '
         'frmSignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(959, 454)
+        Me.Controls.Add(Me.lblIncorrect)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.btnSignUp)
         Me.Controls.Add(Me.txtAnswerQ2)
@@ -364,4 +380,5 @@ Partial Class frmSignUp
     Friend WithEvents btnSignIn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblSignInNotice As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblIncorrect As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

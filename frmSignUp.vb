@@ -23,13 +23,15 @@ Public Class frmSignUp
            String.IsNullOrWhiteSpace(txtAnswerQ2.Text) OrElse
            String.IsNullOrWhiteSpace(cmbSecurityQ1.Text) OrElse
            String.IsNullOrWhiteSpace(cmbSecurityQ2.Text) Then
-            MessageBox.Show("Please fill in all fields.")
+            lblIncorrect.Text = ("Please fill in all fields.")
+            lblIncorrect.Show()
             Return False
         End If
 
         ' Check if the passwords match
         If Not txtPassword.Text.Equals(txtReenterPassword.Text) Then
-            MessageBox.Show("Passwords do not match.")
+            lblIncorrect.Text = ("Passwords do not match.")
+            lblIncorrect.Show()
             Return False
         End If
 
@@ -70,11 +72,13 @@ Public Class frmSignUp
                 cmd.ExecuteNonQuery()
 
                 ' Inform the user of success
-                MessageBox.Show("Sign-up successful!")
+                lblIncorrect.Text = "Sign-up successful!"
+                lblIncorrect.Show()
             End Using
         Catch ex As Exception
             ' Handle any errors that occur
-            MessageBox.Show("Error: " & ex.Message)
+            lblIncorrect.Text = "Error: " & ex.Message
+            lblIncorrect.Show()
         Finally
             ' Ensure the connection is closed
             If conn IsNot Nothing Then
