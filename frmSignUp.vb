@@ -45,7 +45,7 @@ Public Class frmSignUp
         Try
             ' Define the SQL INSERT statement
             ' Replace 'userTable' and column names with your actual table name and columns
-            Dim sql As String = "INSERT INTO accounts (username, password, email, firstName, lastName, securityQuestion1, securityQuestion2, securityAnswer1, securityAnswer2) VALUES (@username, @password, @email, @firstName, @lastName, @securityQuestion1, @securityQuestion2, @securityAnswer1, @securityAnswer2)"
+            Dim sql As String = "INSERT INTO dbaccounts (username, password, email, firstName, lastName, securityQuestion1, securityQuestion2, securityAnswer1, securityAnswer2) VALUES (@username, @password, @email, @firstName, @lastName, @securityQuestion1, @securityQuestion2, @securityAnswer1, @securityAnswer2)"
 
             ' Create a new MySqlCommand using the SQL statement and connection
             Using command As New MySqlCommand(sql, conn)
@@ -80,26 +80,6 @@ Public Class frmSignUp
             Me.Hide()
             frmLogin.Show()
         End Try
-    End Sub
-
-    Private Sub cmbSecurityQ1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub cmbSecurityQ2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ2.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub txtAnswerQ1_TextChanged(sender As Object, e As EventArgs) Handles txtAnswerQ1.TextChanged
-
-    End Sub
-
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Guna2HtmlLabel3_Click(sender As Object, e As EventArgs) Handles lblSignInNotice.Click
-
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
