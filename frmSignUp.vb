@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports BCrypt.Net.BCrypt
 
 Public Class frmSignUp
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
@@ -49,25 +48,23 @@ Public Class frmSignUp
             Dim sql As String = "INSERT INTO dbaccounts (username, password, email, firstName, lastName, securityQuestion1, securityQuestion2, securityAnswer1, securityAnswer2) VALUES (@username, @password, @email, @firstName, @lastName, @securityQuestion1, @securityQuestion2, @securityAnswer1, @securityAnswer2)"
 
             ' Create a new MySqlCommand using the SQL statement and connection
-            Using cmd As New MySqlCommand(sql, conn)
+            Using command As New MySqlCommand(sql, conn)
                 ' Add parameters to the command to prevent SQL injection
-                cmd.Parameters.AddWithValue("@firstName", txtFirstName.Text)
-                cmd.Parameters.AddWithValue("@lastName", txtLastName.Text)
-                cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-                ' Hash the password using BCrypt before inserting it into the database
-                Dim hashedPassword As String = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text)
-                cmd.Parameters.AddWithValue("@password", hashedPassword) ' Now using hashed password
-                cmd.Parameters.AddWithValue("@username", txtUsername.Text)
-                cmd.Parameters.AddWithValue("@securityQuestion1", cmbSecurityQ1.Text)
-                cmd.Parameters.AddWithValue("@securityQuestion2", cmbSecurityQ2.Text)
-                cmd.Parameters.AddWithValue("@securityAnswer1", txtAnswerQ1.Text)
-                cmd.Parameters.AddWithValue("@securityAnswer2", txtAnswerQ2.Text)
+                command.Parameters.AddWithValue("@firstName", txtFirstName.Text)
+                command.Parameters.AddWithValue("@lastName", txtLastName.Text)
+                command.Parameters.AddWithValue("@email", txtEmail.Text)
+                command.Parameters.AddWithValue("@password", txtPassword.Text) ' Consider hashing the password
+                command.Parameters.AddWithValue("@username", txtUsername.Text)
+                command.Parameters.AddWithValue("@securityQuestion1", cmbSecurityQ1.Text)
+                command.Parameters.AddWithValue("@securityQuestion2", cmbSecurityQ2.Text)
+                command.Parameters.AddWithValue("@securityAnswer1", txtAnswerQ1.Text)
+                command.Parameters.AddWithValue("@securityAnswer2", txtAnswerQ2.Text)
 
                 ' Open the connection
                 conn.Open()
 
                 ' Execute the command
-                cmd.ExecuteNonQuery()
+                command.ExecuteNonQuery()
 
                 ' Inform the user of success
                 MessageBox.Show("Sign-up successful!")
