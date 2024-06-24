@@ -76,9 +76,8 @@ Partial Class frmLogin
         '
         'txtUser
         '
-        Me.txtUser.AutoRoundedCorners = True
-        Me.txtUser.BorderColor = System.Drawing.Color.Silver
-        Me.txtUser.BorderRadius = 17
+        Me.txtUser.BorderColor = System.Drawing.Color.LightGray
+        Me.txtUser.BorderRadius = 4
         Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtUser.DefaultText = ""
         Me.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -86,7 +85,7 @@ Partial Class frmLogin
         Me.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtUser.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUser.IconLeft = CType(resources.GetObject("txtUser.IconLeft"), System.Drawing.Image)
         Me.txtUser.Location = New System.Drawing.Point(93, 131)
@@ -99,9 +98,8 @@ Partial Class frmLogin
         '
         'txtPass
         '
-        Me.txtPass.AutoRoundedCorners = True
-        Me.txtPass.BorderColor = System.Drawing.Color.Silver
-        Me.txtPass.BorderRadius = 17
+        Me.txtPass.BorderColor = System.Drawing.Color.LightGray
+        Me.txtPass.BorderRadius = 4
         Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPass.DefaultText = ""
         Me.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -109,12 +107,12 @@ Partial Class frmLogin
         Me.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPass.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPass.IconLeft = CType(resources.GetObject("txtPass.IconLeft"), System.Drawing.Image)
         Me.txtPass.Location = New System.Drawing.Point(93, 184)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.PlaceholderText = "Password"
         Me.txtPass.SelectedText = ""
         Me.txtPass.Size = New System.Drawing.Size(276, 36)
@@ -122,7 +120,7 @@ Partial Class frmLogin
         '
         'btnLogin
         '
-        Me.btnLogin.BorderRadius = 10
+        Me.btnLogin.BorderRadius = 5
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -144,10 +142,11 @@ Partial Class frmLogin
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Gray
         Me.LinkLabel1.Location = New System.Drawing.Point(189, 379)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(84, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(90, 16)
         Me.LinkLabel1.TabIndex = 8
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Reset Password"
@@ -166,6 +165,7 @@ Partial Class frmLogin
         '
         Me.lblIncorrect.AutoSize = False
         Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
+        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
         Me.lblIncorrect.Location = New System.Drawing.Point(93, 226)
         Me.lblIncorrect.Name = "lblIncorrect"
