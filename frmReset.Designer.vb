@@ -183,7 +183,7 @@ Partial Class frmReset
         Me.Guna2PictureBox1.TabIndex = 20
         Me.Guna2PictureBox1.TabStop = False
         '
-        'Form3
+        'frmReset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -199,7 +199,7 @@ Partial Class frmReset
         Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.Guna2ComboBox2)
         Me.Controls.Add(Me.Guna2ComboBox1)
-        Me.Name = "Form3"
+        Me.Name = "frmReset"
         Me.Text = "Reset Form"
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

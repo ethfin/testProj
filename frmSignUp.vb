@@ -16,6 +16,7 @@ Public Class frmSignUp
         ' Check if any of the fields are empty
         If String.IsNullOrWhiteSpace(txtFirstName.Text) OrElse
            String.IsNullOrWhiteSpace(txtLastName.Text) OrElse
+           String.IsNullOrWhiteSpace(txtUsername.Text) OrElse
            String.IsNullOrWhiteSpace(txtEmail.Text) OrElse
            String.IsNullOrWhiteSpace(txtPassword.Text) OrElse
            String.IsNullOrWhiteSpace(txtReenterPassword.Text) OrElse
