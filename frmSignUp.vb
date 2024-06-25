@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 Imports BC = BCrypt.Net.BCrypt
 
 Public Class frmSignUp
@@ -46,36 +47,47 @@ Public Class frmSignUp
         ' Use the Common class to get the database connection
         Dim conn As MySqlConnection = Common.getDBConnectionX()
 
+        ' Define a regular expression pattern for valid email addresses
+        Dim emailPattern As String = "^\S+@\S+\.\S+$"
+
         Try
-            ' Define the SQL INSERT statement
-            ' Replace 'userTable' and column names with your actual table name and columns
-            Dim sql As String = "INSERT INTO dbaccounts (username, password, email, firstName, lastName, securityQuestion1, securityQuestion2, securityAnswer1, securityAnswer2) VALUES (@username, @password, @email, @firstName, @lastName, @securityQuestion1, @securityQuestion2, @securityAnswer1, @securityAnswer2)"
+            ' Validate the email address
+            If Regex.IsMatch(txtEmail.Text, emailPattern) Then
+                ' Define the SQL INSERT statement
+                ' Replace 'userTable' and column names with your actual table name and columns
+                Dim sql As String = "INSERT INTO dbaccounts (username, password, email, firstName, lastName, securityQuestion1, securityQuestion2, securityAnswer1, securityAnswer2) VALUES (@username, @password, @email, @firstName, @lastName, @securityQuestion1, @securityQuestion2, @securityAnswer1, @securityAnswer2)"
 
-            ' Create a new MySqlCommand using the SQL statement and connection
-            Using cmd As New MySqlCommand(sql, conn)
-                ' Add parameters to the command to prevent SQL injection
-                cmd.Parameters.AddWithValue("@firstName", txtFirstName.Text)
-                cmd.Parameters.AddWithValue("@lastName", txtLastName.Text)
-                cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-                ' Hash the password using BCrypt before inserting it into the database
-                Dim hashedPassword As String = BC.HashPassword(txtPassword.Text)
-                cmd.Parameters.AddWithValue("@password", hashedPassword) ' Now using hashed password
-                cmd.Parameters.AddWithValue("@username", txtUsername.Text)
-                cmd.Parameters.AddWithValue("@securityQuestion1", cmbSecurityQ1.Text)
-                cmd.Parameters.AddWithValue("@securityQuestion2", cmbSecurityQ2.Text)
-                cmd.Parameters.AddWithValue("@securityAnswer1", txtAnswerQ1.Text)
-                cmd.Parameters.AddWithValue("@securityAnswer2", txtAnswerQ2.Text)
+                ' Create a new MySqlCommand using the SQL statement and connection
+                Using cmd As New MySqlCommand(sql, conn)
+                    ' Add parameters to the command to prevent SQL injection
+                    cmd.Parameters.AddWithValue("@firstName", txtFirstName.Text)
+                    cmd.Parameters.AddWithValue("@lastName", txtLastName.Text)
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+                    ' Hash the password using BCrypt before inserting it into the database
+                    Dim hashedPassword As String = BC.HashPassword(txtPassword.Text)
+                    cmd.Parameters.AddWithValue("@password", hashedPassword) ' Now using hashed password
+                    cmd.Parameters.AddWithValue("@username", txtUsername.Text)
+                    cmd.Parameters.AddWithValue("@securityQuestion1", cmbSecurityQ1.Text)
+                    cmd.Parameters.AddWithValue("@securityQuestion2", cmbSecurityQ2.Text)
+                    cmd.Parameters.AddWithValue("@securityAnswer1", txtAnswerQ1.Text)
+                    cmd.Parameters.AddWithValue("@securityAnswer2", txtAnswerQ2.Text)
 
-                ' Open the connection
-                conn.Open()
+                    ' Open the connection
+                    conn.Open()
 
-                ' Execute the command
-                cmd.ExecuteNonQuery()
+                    ' Execute the command
+                    cmd.ExecuteNonQuery()
 
-                ' Inform the user of success
-                lblIncorrect.Text = "Sign-up successful!"
+                    ' Inform the user of success
+                    MessageBox.Show("Sign-up successful!")
+                    Me.Hide()
+                    frmLogin.Show()
+                End Using
+            Else
+                ' If the email is not valid, inform the user
+                lblIncorrect.Text = ("Please enter a valid email address.")
                 lblIncorrect.Show()
-            End Using
+            End If
         Catch ex As Exception
             ' Handle any errors that occur
             lblIncorrect.Text = "Error: " & ex.Message
@@ -85,8 +97,6 @@ Public Class frmSignUp
             If conn IsNot Nothing Then
                 conn.Close()
             End If
-            Me.Hide()
-            frmLogin.Show()
         End Try
     End Sub
 
