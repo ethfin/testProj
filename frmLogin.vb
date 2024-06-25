@@ -27,7 +27,7 @@ Public Class frmLogin
             If result > 0 Then
                 MessageBox.Show("Login successful!")
                 ' Proceed to the next form or main application window
-                Me.Hide()
+                Me.Close()
                 frmMain.WindowState = FormWindowState.Normal
                 frmMain.ShowInTaskbar = True
                 frmMain.Show()

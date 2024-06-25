@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports MySql.Data.MySqlClient
 
 Public Class frmSignUp
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
@@ -77,7 +78,7 @@ Public Class frmSignUp
             If conn IsNot Nothing Then
                 conn.Close()
             End If
-            Me.Hide()
+            Me.Close()
             frmLogin.Show()
         End Try
     End Sub
@@ -85,5 +86,35 @@ Public Class frmSignUp
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Me.Hide()
         frmLogin.Show()
+    End Sub
+
+    Private Sub cmbSecurityQ1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ1.SelectedIndexChanged
+        ' Store the previously selected item from cmbSecurityQ2
+        Static prevSelectedIndex2 As Integer = -1
+        If cmbSecurityQ2.SelectedIndex <> -1 AndAlso prevSelectedIndex2 <> -1 Then
+            ' Add the previously selected item back to cmbSecurityQ2
+            cmbSecurityQ2.Items.Insert(prevSelectedIndex2, cmbSecurityQ2.Tag)
+        End If
+        ' Remove the currently selected item of cmbSecurityQ1 from cmbSecurityQ2
+        If cmbSecurityQ2.Items.Contains(cmbSecurityQ1.SelectedItem) Then
+            prevSelectedIndex2 = cmbSecurityQ2.Items.IndexOf(cmbSecurityQ1.SelectedItem)
+            cmbSecurityQ2.Tag = cmbSecurityQ1.SelectedItem ' Store the removed item
+            cmbSecurityQ2.Items.Remove(cmbSecurityQ1.SelectedItem)
+        End If
+    End Sub
+
+    Private Sub cmbSecurityQ2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ2.SelectedIndexChanged
+        ' Store the previously selected item from cmbSecurityQ1
+        Static prevSelectedIndex1 As Integer = -1
+        If cmbSecurityQ1.SelectedIndex <> -1 AndAlso prevSelectedIndex1 <> -1 Then
+            ' Add the previously selected item back to cmbSecurityQ1
+            cmbSecurityQ1.Items.Insert(prevSelectedIndex1, cmbSecurityQ1.Tag)
+        End If
+        ' Remove the currently selected item of cmbSecurityQ2 from cmbSecurityQ1
+        If cmbSecurityQ1.Items.Contains(cmbSecurityQ2.SelectedItem) Then
+            prevSelectedIndex1 = cmbSecurityQ1.Items.IndexOf(cmbSecurityQ2.SelectedItem)
+            cmbSecurityQ1.Tag = cmbSecurityQ2.SelectedItem ' Store the removed item
+            cmbSecurityQ1.Items.Remove(cmbSecurityQ2.SelectedItem)
+        End If
     End Sub
 End Class
