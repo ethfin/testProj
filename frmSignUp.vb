@@ -23,8 +23,11 @@ Public Class frmSignUp
            String.IsNullOrWhiteSpace(txtAnswerQ2.Text) OrElse
            String.IsNullOrWhiteSpace(cmbSecurityQ1.Text) OrElse
            String.IsNullOrWhiteSpace(cmbSecurityQ2.Text) Then
+
+
             MessageBox.Show("Please fill in all fields.")
             Return False
+
         End If
 
         ' Check if the passwords match
@@ -116,5 +119,9 @@ Public Class frmSignUp
             cmbSecurityQ1.Tag = cmbSecurityQ2.SelectedItem ' Store the removed item
             cmbSecurityQ1.Items.Remove(cmbSecurityQ2.SelectedItem)
         End If
+    End Sub
+
+    Private Sub frmSignUp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
