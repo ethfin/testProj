@@ -192,9 +192,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmSignUp1.resx">
-      <DependentUpon>frmSignUp1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReset.resx">
       <DependentUpon>frmReset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignUp1.resx">
+      <DependentUpon>frmSignUp1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignUp2.resx">
       <DependentUpon>frmSignUp2.vb</DependentUpon>
