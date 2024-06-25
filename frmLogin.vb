@@ -27,9 +27,10 @@ Public Class frmLogin
             If result > 0 Then
                 MessageBox.Show("Login successful!")
                 ' Proceed to the next form or main application window
-                frmMain.Show()
-
                 Me.Hide()
+                frmMain.WindowState = FormWindowState.Normal
+                frmMain.ShowInTaskbar = True
+                frmMain.Show()
             Else
                 lblIncorrect.Text = "Invalid username or password."
                 lblIncorrect.Show()
