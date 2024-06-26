@@ -36,7 +36,7 @@ Public Class frmLoginNew
     End Function
 
     ' The MouseDown event for the panel to initiate the form dragging.
-    Private Sub Panel_MouseDown(sender As Object, e As MouseEventArgs) Handles panelLogin.MouseDown, pbBackground.MouseDown
+    Private Sub Panel_MouseDown(sender As Object, e As MouseEventArgs) Handles panelLogin.MouseDown, pnlBackground.MouseDown
         If e.Button = MouseButtons.Left Then
             ReleaseCapture()
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0)
@@ -85,14 +85,14 @@ Public Class frmLoginNew
                 frmMain.ShowInTaskbar = True
                 frmMain.Show()
             Else
-                lblIncorrect.Text = "Invalid username or password."
-                lblIncorrect.Show()
+                lblError.Text = "Invalid username or password."
+                lblError.Show()
             End If
 
         Catch ex As Exception
             ' Handle any errors that occur
-            lblIncorrect.Text = "Error: " & ex.Message
-            lblIncorrect.Show()
+            lblError.Text = "Error: " & ex.Message
+            lblError.Show()
         Finally
             ' Close the connection whether or not an error occurred
             If conn IsNot Nothing Then
