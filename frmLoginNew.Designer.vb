@@ -31,9 +31,10 @@ Partial Class frmLoginNew
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lnklblReset = New System.Windows.Forms.LinkLabel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.pbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLogin.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,8 +55,9 @@ Partial Class frmLoginNew
         'panelLogin
         '
         Me.panelLogin.BackColor = System.Drawing.Color.White
-        Me.panelLogin.Controls.Add(Me.Guna2Button2)
-        Me.panelLogin.Controls.Add(Me.Guna2Button1)
+        Me.panelLogin.Controls.Add(Me.lblIncorrect)
+        Me.panelLogin.Controls.Add(Me.btnSignUp)
+        Me.panelLogin.Controls.Add(Me.btnLogin)
         Me.panelLogin.Controls.Add(Me.lnklblReset)
         Me.panelLogin.Controls.Add(Me.txtPassword)
         Me.panelLogin.Controls.Add(Me.txtUsername)
@@ -155,40 +157,40 @@ Partial Class frmLoginNew
         Me.lnklblReset.TabStop = True
         Me.lnklblReset.Text = "Reset account?"
         '
-        'Guna2Button1
+        'btnLogin
         '
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.Black
-        Me.Guna2Button1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.IndicateFocus = True
-        Me.Guna2Button1.Location = New System.Drawing.Point(63, 370)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button1.TabIndex = 3
-        Me.Guna2Button1.Text = "Login"
+        Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogin.FillColor = System.Drawing.Color.Black
+        Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.IndicateFocus = True
+        Me.btnLogin.Location = New System.Drawing.Point(63, 395)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(180, 45)
+        Me.btnLogin.TabIndex = 3
+        Me.btnLogin.Text = "Login"
         '
-        'Guna2Button2
+        'btnSignUp
         '
-        Me.Guna2Button2.BorderThickness = 2
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.White
-        Me.Guna2Button2.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.Black
-        Me.Guna2Button2.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.IndicateFocus = True
-        Me.Guna2Button2.Location = New System.Drawing.Point(249, 370)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button2.TabIndex = 4
-        Me.Guna2Button2.Text = "Sign up"
+        Me.btnSignUp.BorderThickness = 2
+        Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSignUp.FillColor = System.Drawing.Color.White
+        Me.btnSignUp.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.btnSignUp.ForeColor = System.Drawing.Color.Black
+        Me.btnSignUp.HoverState.FillColor = System.Drawing.Color.Black
+        Me.btnSignUp.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnSignUp.IndicateFocus = True
+        Me.btnSignUp.Location = New System.Drawing.Point(249, 395)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(180, 45)
+        Me.btnSignUp.TabIndex = 4
+        Me.btnSignUp.Text = "Sign up"
         '
         'btnClose
         '
@@ -208,6 +210,20 @@ Partial Class frmLoginNew
         Me.btnClose.TabIndex = 5
         Me.btnClose.Text = "X"
         Me.btnClose.UseTransparentBackground = True
+        '
+        'lblIncorrect
+        '
+        Me.lblIncorrect.AutoSize = False
+        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
+        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
+        Me.lblIncorrect.Location = New System.Drawing.Point(63, 363)
+        Me.lblIncorrect.Name = "lblIncorrect"
+        Me.lblIncorrect.Size = New System.Drawing.Size(366, 26)
+        Me.lblIncorrect.TabIndex = 5
+        Me.lblIncorrect.Text = "Error"
+        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIncorrect.Visible = False
         '
         'frmLoginNew
         '
@@ -237,7 +253,8 @@ Partial Class frmLoginNew
     Friend WithEvents lnklblReset As LinkLabel
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblIncorrect As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
