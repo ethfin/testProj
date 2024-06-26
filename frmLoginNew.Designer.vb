@@ -89,7 +89,7 @@ Partial Class frmLoginNew
         Me.btnSignUp.HoverState.FillColor = System.Drawing.Color.Black
         Me.btnSignUp.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnSignUp.IndicateFocus = True
-        Me.btnSignUp.Location = New System.Drawing.Point(181, 517)
+        Me.btnSignUp.Location = New System.Drawing.Point(187, 502)
         Me.btnSignUp.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(240, 55)
@@ -259,7 +259,7 @@ Partial Class frmLoginNew
         Me.lblSignUp.BackColor = System.Drawing.Color.Transparent
         Me.lblSignUp.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSignUp.ForeColor = System.Drawing.Color.GhostWhite
-        Me.lblSignUp.Location = New System.Drawing.Point(136, 577)
+        Me.lblSignUp.Location = New System.Drawing.Point(139, 575)
         Me.lblSignUp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSignUp.Name = "lblSignUp"
         Me.lblSignUp.Size = New System.Drawing.Size(311, 19)
