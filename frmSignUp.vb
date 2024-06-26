@@ -88,7 +88,7 @@ Public Class frmSignUp
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Me.Hide()
-        frmLogin.Show()
+        frmLoginNew.Show()
     End Sub
 
     Private Sub cmbSecurityQ1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSecurityQ1.SelectedIndexChanged
