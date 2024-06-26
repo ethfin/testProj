@@ -28,8 +28,8 @@ Partial Class frmSignUp1
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.lblPasswordNotice = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblPasswordNotice2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblPasswordNotice1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.SuspendLayout()
         '
         'txtUsername
@@ -143,35 +143,35 @@ Partial Class frmSignUp1
         Me.lblPasswordNotice.TabIndex = 28
         Me.lblPasswordNotice.Text = "Password Must have 3 of the following :"
         '
-        'Guna2HtmlLabel1
+        'lblPasswordNotice2
         '
-        Me.Guna2HtmlLabel1.AutoSize = False
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(306, 226)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(108, 39)
-        Me.Guna2HtmlLabel1.TabIndex = 29
-        Me.Guna2HtmlLabel1.Text = "Capital Characters Small Letters Numbers"
+        Me.lblPasswordNotice2.AutoSize = False
+        Me.lblPasswordNotice2.BackColor = System.Drawing.Color.Transparent
+        Me.lblPasswordNotice2.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.lblPasswordNotice2.Location = New System.Drawing.Point(306, 226)
+        Me.lblPasswordNotice2.Name = "lblPasswordNotice2"
+        Me.lblPasswordNotice2.Size = New System.Drawing.Size(108, 39)
+        Me.lblPasswordNotice2.TabIndex = 29
+        Me.lblPasswordNotice2.Text = "Capital Characters Small Letters Numbers"
         '
-        'Guna2HtmlLabel2
+        'lblPasswordNotice1
         '
-        Me.Guna2HtmlLabel2.AutoSize = False
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(306, 190)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(142, 14)
-        Me.Guna2HtmlLabel2.TabIndex = 30
-        Me.Guna2HtmlLabel2.Text = "Must have 12- 30 Characters"
+        Me.lblPasswordNotice1.AutoSize = False
+        Me.lblPasswordNotice1.BackColor = System.Drawing.Color.Transparent
+        Me.lblPasswordNotice1.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.lblPasswordNotice1.Location = New System.Drawing.Point(306, 190)
+        Me.lblPasswordNotice1.Name = "lblPasswordNotice1"
+        Me.lblPasswordNotice1.Size = New System.Drawing.Size(142, 14)
+        Me.lblPasswordNotice1.TabIndex = 30
+        Me.lblPasswordNotice1.Text = "Must have 12- 30 Characters"
         '
         'frmSignUp1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(512, 450)
-        Me.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Controls.Add(Me.lblPasswordNotice1)
+        Me.Controls.Add(Me.lblPasswordNotice2)
         Me.Controls.Add(Me.lblPasswordNotice)
         Me.Controls.Add(Me.btnSignUp)
         Me.Controls.Add(Me.txtUsername)
@@ -190,6 +190,6 @@ Partial Class frmSignUp1
     Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblPasswordNotice As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPasswordNotice2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPasswordNotice1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
