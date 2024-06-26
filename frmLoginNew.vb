@@ -103,6 +103,14 @@ Public Class frmLoginNew
 
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
         Me.Hide()
-        frmSignUp.Show()
+        frmSignUpNew.Show()
+    End Sub
+
+    Private Sub lblError_Click(sender As Object, e As EventArgs) Handles lblError.Click
+
+    End Sub
+
+    Private Sub panelLogin_Paint(sender As Object, e As PaintEventArgs) Handles panelLogin.Paint
+
     End Sub
 End Class
