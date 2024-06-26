@@ -36,6 +36,7 @@ Partial Class frmLoginNew
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
         Me.panelLogin2 = New System.Windows.Forms.Panel()
         Me.lblSignUp = New System.Windows.Forms.LinkLabel()
+        Me.lblCopyright = New System.Windows.Forms.LinkLabel()
         Me.panelLogin.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLogin2.SuspendLayout()
@@ -44,6 +45,7 @@ Partial Class frmLoginNew
         'panelLogin
         '
         Me.panelLogin.BackColor = System.Drawing.Color.White
+        Me.panelLogin.Controls.Add(Me.lblCopyright)
         Me.panelLogin.Controls.Add(Me.panelLogin2)
         Me.panelLogin.Controls.Add(Me.lblIncorrect)
         Me.panelLogin.Controls.Add(Me.btnLogin)
@@ -253,6 +255,22 @@ Partial Class frmLoginNew
         Me.lblSignUp.Text = "Don't have an account? Signup now!"
         Me.lblSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblCopyright
+        '
+        Me.lblCopyright.AutoSize = True
+        Me.lblCopyright.BackColor = System.Drawing.Color.Transparent
+        Me.lblCopyright.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCopyright.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.lblCopyright.LinkColor = System.Drawing.Color.Black
+        Me.lblCopyright.Location = New System.Drawing.Point(173, 574)
+        Me.lblCopyright.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCopyright.Name = "lblCopyright"
+        Me.lblCopyright.Size = New System.Drawing.Size(331, 21)
+        Me.lblCopyright.TabIndex = 9
+        Me.lblCopyright.TabStop = True
+        Me.lblCopyright.Text = "© 2024 ChronoPulse. All rights reserved."
+        Me.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmLoginNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -286,4 +304,5 @@ Partial Class frmLoginNew
     Friend WithEvents lblIncorrect As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents panelLogin2 As Panel
     Friend WithEvents lblSignUp As LinkLabel
+    Friend WithEvents lblCopyright As LinkLabel
 End Class
