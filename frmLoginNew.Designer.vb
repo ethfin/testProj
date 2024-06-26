@@ -37,6 +37,7 @@ Partial Class frmLoginNew
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
         Me.lblCopyright = New System.Windows.Forms.Label()
         Me.lblSignUp = New System.Windows.Forms.Label()
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2Button()
         Me.panelLogin.SuspendLayout()
         Me.panelLogin2.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +67,7 @@ Partial Class frmLoginNew
         '
         Me.panelLogin2.BackgroundImage = CType(resources.GetObject("panelLogin2.BackgroundImage"), System.Drawing.Image)
         Me.panelLogin2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panelLogin2.Controls.Add(Me.btnMinimize)
         Me.panelLogin2.Controls.Add(Me.lblSignUp)
         Me.panelLogin2.Controls.Add(Me.btnSignUp)
         Me.panelLogin2.Dock = System.Windows.Forms.DockStyle.Right
@@ -244,7 +246,7 @@ Partial Class frmLoginNew
         Me.lblCopyright.AutoSize = True
         Me.lblCopyright.BackColor = System.Drawing.Color.Transparent
         Me.lblCopyright.Font = New System.Drawing.Font("Century Gothic", 10.0!)
-        Me.lblCopyright.Location = New System.Drawing.Point(176, 574)
+        Me.lblCopyright.Location = New System.Drawing.Point(158, 575)
         Me.lblCopyright.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCopyright.Name = "lblCopyright"
         Me.lblCopyright.Size = New System.Drawing.Size(331, 21)
@@ -257,15 +259,36 @@ Partial Class frmLoginNew
         Me.lblSignUp.BackColor = System.Drawing.Color.Transparent
         Me.lblSignUp.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSignUp.ForeColor = System.Drawing.Color.GhostWhite
-        Me.lblSignUp.Location = New System.Drawing.Point(146, 576)
+        Me.lblSignUp.Location = New System.Drawing.Point(136, 577)
         Me.lblSignUp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSignUp.Name = "lblSignUp"
         Me.lblSignUp.Size = New System.Drawing.Size(311, 19)
         Me.lblSignUp.TabIndex = 11
         Me.lblSignUp.Text = "Don't have an account? Signup now!"
         '
+        'btnMinimize
+        '
+        Me.btnMinimize.BackColor = System.Drawing.Color.Transparent
+        Me.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnMinimize.FillColor = System.Drawing.Color.Transparent
+        Me.btnMinimize.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnMinimize.ForeColor = System.Drawing.Color.White
+        Me.btnMinimize.HoverState.FillColor = System.Drawing.Color.LightSkyBlue
+        Me.btnMinimize.IndicateFocus = True
+        Me.btnMinimize.Location = New System.Drawing.Point(499, 0)
+        Me.btnMinimize.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(40, 37)
+        Me.btnMinimize.TabIndex = 6
+        Me.btnMinimize.Text = "-"
+        Me.btnMinimize.UseTransparentBackground = True
+        '
         'frmLoginNew
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1233, 604)
@@ -298,4 +321,5 @@ Partial Class frmLoginNew
     Friend WithEvents panelLogin2 As Panel
     Friend WithEvents lblCopyright As Label
     Friend WithEvents lblSignUp As Label
+    Friend WithEvents btnMinimize As Guna.UI2.WinForms.Guna2Button
 End Class
