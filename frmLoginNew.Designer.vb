@@ -25,16 +25,16 @@ Partial Class frmLoginNew
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLoginNew))
         Me.pbBackground = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.panelLogin = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.lnklblReset = New System.Windows.Forms.LinkLabel()
+        Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblWelcome1 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lnklblReset = New System.Windows.Forms.LinkLabel()
-        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
-        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.pbBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLogin.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +69,107 @@ Partial Class frmLoginNew
         Me.panelLogin.Name = "panelLogin"
         Me.panelLogin.Size = New System.Drawing.Size(511, 491)
         Me.panelLogin.TabIndex = 1
+        '
+        'lblIncorrect
+        '
+        Me.lblIncorrect.AutoSize = False
+        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
+        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
+        Me.lblIncorrect.Location = New System.Drawing.Point(63, 363)
+        Me.lblIncorrect.Name = "lblIncorrect"
+        Me.lblIncorrect.Size = New System.Drawing.Size(366, 26)
+        Me.lblIncorrect.TabIndex = 5
+        Me.lblIncorrect.Text = "Error"
+        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIncorrect.Visible = False
+        '
+        'btnSignUp
+        '
+        Me.btnSignUp.BorderThickness = 2
+        Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSignUp.FillColor = System.Drawing.Color.White
+        Me.btnSignUp.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.btnSignUp.ForeColor = System.Drawing.Color.Black
+        Me.btnSignUp.HoverState.FillColor = System.Drawing.Color.Black
+        Me.btnSignUp.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnSignUp.IndicateFocus = True
+        Me.btnSignUp.Location = New System.Drawing.Point(249, 395)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(180, 45)
+        Me.btnSignUp.TabIndex = 4
+        Me.btnSignUp.Text = "Sign up"
+        '
+        'btnLogin
+        '
+        Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogin.FillColor = System.Drawing.Color.Black
+        Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.IndicateFocus = True
+        Me.btnLogin.Location = New System.Drawing.Point(63, 395)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(180, 45)
+        Me.btnLogin.TabIndex = 3
+        Me.btnLogin.Text = "Login"
+        '
+        'lnklblReset
+        '
+        Me.lnklblReset.AutoSize = True
+        Me.lnklblReset.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.lnklblReset.LinkColor = System.Drawing.Color.Gray
+        Me.lnklblReset.Location = New System.Drawing.Point(61, 336)
+        Me.lnklblReset.Name = "lnklblReset"
+        Me.lnklblReset.Size = New System.Drawing.Size(83, 13)
+        Me.lnklblReset.TabIndex = 2
+        Me.lnklblReset.TabStop = True
+        Me.lnklblReset.Text = "Reset account?"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BorderColor = System.Drawing.Color.Gray
+        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPassword.DefaultText = ""
+        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!)
+        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Location = New System.Drawing.Point(63, 292)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPassword.PlaceholderText = "Password"
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.Size = New System.Drawing.Size(366, 41)
+        Me.txtPassword.TabIndex = 1
+        '
+        'txtUsername
+        '
+        Me.txtUsername.BorderColor = System.Drawing.Color.Gray
+        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUsername.DefaultText = ""
+        Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.Location = New System.Drawing.Point(63, 252)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsername.PlaceholderText = "Username"
+        Me.txtUsername.SelectedText = ""
+        Me.txtUsername.Size = New System.Drawing.Size(366, 41)
+        Me.txtUsername.TabIndex = 0
         '
         'Label1
         '
@@ -105,93 +206,6 @@ Partial Class frmLoginNew
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
-        'txtUsername
-        '
-        Me.txtUsername.BorderColor = System.Drawing.Color.Gray
-        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtUsername.DefaultText = ""
-        Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.Location = New System.Drawing.Point(63, 252)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtUsername.PlaceholderText = "Username"
-        Me.txtUsername.SelectedText = ""
-        Me.txtUsername.Size = New System.Drawing.Size(366, 41)
-        Me.txtUsername.TabIndex = 0
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BorderColor = System.Drawing.Color.Gray
-        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPassword.DefaultText = ""
-        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!)
-        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(63, 292)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPassword.PlaceholderText = "Password"
-        Me.txtPassword.SelectedText = ""
-        Me.txtPassword.Size = New System.Drawing.Size(366, 41)
-        Me.txtPassword.TabIndex = 1
-        '
-        'lnklblReset
-        '
-        Me.lnklblReset.AutoSize = True
-        Me.lnklblReset.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.lnklblReset.LinkColor = System.Drawing.Color.Gray
-        Me.lnklblReset.Location = New System.Drawing.Point(61, 336)
-        Me.lnklblReset.Name = "lnklblReset"
-        Me.lnklblReset.Size = New System.Drawing.Size(83, 13)
-        Me.lnklblReset.TabIndex = 2
-        Me.lnklblReset.TabStop = True
-        Me.lnklblReset.Text = "Reset account?"
-        '
-        'btnLogin
-        '
-        Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnLogin.FillColor = System.Drawing.Color.Black
-        Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.IndicateFocus = True
-        Me.btnLogin.Location = New System.Drawing.Point(63, 395)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(180, 45)
-        Me.btnLogin.TabIndex = 3
-        Me.btnLogin.Text = "Login"
-        '
-        'btnSignUp
-        '
-        Me.btnSignUp.BorderThickness = 2
-        Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnSignUp.FillColor = System.Drawing.Color.White
-        Me.btnSignUp.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.btnSignUp.ForeColor = System.Drawing.Color.Black
-        Me.btnSignUp.HoverState.FillColor = System.Drawing.Color.Black
-        Me.btnSignUp.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.IndicateFocus = True
-        Me.btnSignUp.Location = New System.Drawing.Point(249, 395)
-        Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(180, 45)
-        Me.btnSignUp.TabIndex = 4
-        Me.btnSignUp.Text = "Sign up"
-        '
         'btnClose
         '
         Me.btnClose.BackColor = System.Drawing.Color.Transparent
@@ -211,20 +225,6 @@ Partial Class frmLoginNew
         Me.btnClose.Text = "X"
         Me.btnClose.UseTransparentBackground = True
         '
-        'lblIncorrect
-        '
-        Me.lblIncorrect.AutoSize = False
-        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
-        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
-        Me.lblIncorrect.Location = New System.Drawing.Point(63, 363)
-        Me.lblIncorrect.Name = "lblIncorrect"
-        Me.lblIncorrect.Size = New System.Drawing.Size(366, 26)
-        Me.lblIncorrect.TabIndex = 5
-        Me.lblIncorrect.Text = "Error"
-        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblIncorrect.Visible = False
-        '
         'frmLoginNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,6 +234,8 @@ Partial Class frmLoginNew
         Me.Controls.Add(Me.panelLogin)
         Me.Controls.Add(Me.pbBackground)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmLoginNew"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLoginNew"
