@@ -24,8 +24,9 @@ Partial Class frmLoginNew
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLoginNew))
         Me.panelLogin = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.panelLogin2 = New System.Windows.Forms.Panel()
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblIncorrect = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.lnklblReset = New System.Windows.Forms.LinkLabel()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -34,12 +35,11 @@ Partial Class frmLoginNew
         Me.lblWelcome1 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
-        Me.panelLogin2 = New System.Windows.Forms.Panel()
-        Me.lblSignUp = New System.Windows.Forms.LinkLabel()
-        Me.lblCopyright = New System.Windows.Forms.LinkLabel()
+        Me.lblCopyright = New System.Windows.Forms.Label()
+        Me.lblSignUp = New System.Windows.Forms.Label()
         Me.panelLogin.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLogin2.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelLogin
@@ -62,20 +62,17 @@ Partial Class frmLoginNew
         Me.panelLogin.Size = New System.Drawing.Size(1233, 604)
         Me.panelLogin.TabIndex = 1
         '
-        'lblIncorrect
+        'panelLogin2
         '
-        Me.lblIncorrect.AutoSize = False
-        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
-        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
-        Me.lblIncorrect.Location = New System.Drawing.Point(94, 457)
-        Me.lblIncorrect.Margin = New System.Windows.Forms.Padding(4)
-        Me.lblIncorrect.Name = "lblIncorrect"
-        Me.lblIncorrect.Size = New System.Drawing.Size(488, 32)
-        Me.lblIncorrect.TabIndex = 5
-        Me.lblIncorrect.Text = "Error"
-        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblIncorrect.Visible = False
+        Me.panelLogin2.BackgroundImage = CType(resources.GetObject("panelLogin2.BackgroundImage"), System.Drawing.Image)
+        Me.panelLogin2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panelLogin2.Controls.Add(Me.lblSignUp)
+        Me.panelLogin2.Controls.Add(Me.btnSignUp)
+        Me.panelLogin2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.panelLogin2.Location = New System.Drawing.Point(655, 0)
+        Me.panelLogin2.Name = "panelLogin2"
+        Me.panelLogin2.Size = New System.Drawing.Size(578, 604)
+        Me.panelLogin2.TabIndex = 7
         '
         'btnSignUp
         '
@@ -96,6 +93,21 @@ Partial Class frmLoginNew
         Me.btnSignUp.Size = New System.Drawing.Size(240, 55)
         Me.btnSignUp.TabIndex = 4
         Me.btnSignUp.Text = "Sign up"
+        '
+        'lblIncorrect
+        '
+        Me.lblIncorrect.AutoSize = False
+        Me.lblIncorrect.BackColor = System.Drawing.Color.Transparent
+        Me.lblIncorrect.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrect.ForeColor = System.Drawing.Color.Red
+        Me.lblIncorrect.Location = New System.Drawing.Point(94, 457)
+        Me.lblIncorrect.Margin = New System.Windows.Forms.Padding(4)
+        Me.lblIncorrect.Name = "lblIncorrect"
+        Me.lblIncorrect.Size = New System.Drawing.Size(488, 32)
+        Me.lblIncorrect.TabIndex = 5
+        Me.lblIncorrect.Text = "Error"
+        Me.lblIncorrect.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblIncorrect.Visible = False
         '
         'btnLogin
         '
@@ -140,7 +152,7 @@ Partial Class frmLoginNew
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Location = New System.Drawing.Point(84, 369)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderText = "Password"
@@ -161,7 +173,7 @@ Partial Class frmLoginNew
         Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Location = New System.Drawing.Point(84, 316)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.PlaceholderText = "Username"
@@ -177,7 +189,7 @@ Partial Class frmLoginNew
         Me.Label1.Location = New System.Drawing.Point(142, 252)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(393, 37)
+        Me.Label1.Size = New System.Drawing.Size(379, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Level Up Your Game!"
         '
@@ -227,49 +239,30 @@ Partial Class frmLoginNew
         Me.btnClose.Text = "X"
         Me.btnClose.UseTransparentBackground = True
         '
-        'panelLogin2
+        'lblCopyright
         '
-        Me.panelLogin2.BackgroundImage = CType(resources.GetObject("panelLogin2.BackgroundImage"), System.Drawing.Image)
-        Me.panelLogin2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.panelLogin2.Controls.Add(Me.lblSignUp)
-        Me.panelLogin2.Controls.Add(Me.btnSignUp)
-        Me.panelLogin2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.panelLogin2.Location = New System.Drawing.Point(655, 0)
-        Me.panelLogin2.Name = "panelLogin2"
-        Me.panelLogin2.Size = New System.Drawing.Size(578, 604)
-        Me.panelLogin2.TabIndex = 7
+        Me.lblCopyright.AutoSize = True
+        Me.lblCopyright.BackColor = System.Drawing.Color.Transparent
+        Me.lblCopyright.Font = New System.Drawing.Font("Century Gothic", 10.0!)
+        Me.lblCopyright.Location = New System.Drawing.Point(176, 574)
+        Me.lblCopyright.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCopyright.Name = "lblCopyright"
+        Me.lblCopyright.Size = New System.Drawing.Size(331, 21)
+        Me.lblCopyright.TabIndex = 10
+        Me.lblCopyright.Text = "© 2024 ChronoPulse. All rights reserved."
         '
         'lblSignUp
         '
         Me.lblSignUp.AutoSize = True
         Me.lblSignUp.BackColor = System.Drawing.Color.Transparent
-        Me.lblSignUp.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSignUp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.lblSignUp.LinkColor = System.Drawing.Color.GhostWhite
-        Me.lblSignUp.Location = New System.Drawing.Point(135, 576)
+        Me.lblSignUp.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSignUp.ForeColor = System.Drawing.Color.GhostWhite
+        Me.lblSignUp.Location = New System.Drawing.Point(146, 576)
         Me.lblSignUp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSignUp.Name = "lblSignUp"
         Me.lblSignUp.Size = New System.Drawing.Size(311, 19)
-        Me.lblSignUp.TabIndex = 8
-        Me.lblSignUp.TabStop = True
+        Me.lblSignUp.TabIndex = 11
         Me.lblSignUp.Text = "Don't have an account? Signup now!"
-        Me.lblSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblCopyright
-        '
-        Me.lblCopyright.AutoSize = True
-        Me.lblCopyright.BackColor = System.Drawing.Color.Transparent
-        Me.lblCopyright.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCopyright.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.lblCopyright.LinkColor = System.Drawing.Color.Black
-        Me.lblCopyright.Location = New System.Drawing.Point(159, 574)
-        Me.lblCopyright.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblCopyright.Name = "lblCopyright"
-        Me.lblCopyright.Size = New System.Drawing.Size(331, 21)
-        Me.lblCopyright.TabIndex = 9
-        Me.lblCopyright.TabStop = True
-        Me.lblCopyright.Text = "© 2024 ChronoPulse. All rights reserved."
-        Me.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmLoginNew
         '
@@ -285,9 +278,9 @@ Partial Class frmLoginNew
         Me.Text = "frmLoginNew"
         Me.panelLogin.ResumeLayout(False)
         Me.panelLogin.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLogin2.ResumeLayout(False)
         Me.panelLogin2.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -303,6 +296,6 @@ Partial Class frmLoginNew
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblIncorrect As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents panelLogin2 As Panel
-    Friend WithEvents lblSignUp As LinkLabel
-    Friend WithEvents lblCopyright As LinkLabel
+    Friend WithEvents lblCopyright As Label
+    Friend WithEvents lblSignUp As Label
 End Class
