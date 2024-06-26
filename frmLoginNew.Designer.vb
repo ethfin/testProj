@@ -119,7 +119,7 @@ Partial Class frmLoginNew
         Me.lnklblReset.AutoSize = True
         Me.lnklblReset.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.lnklblReset.LinkColor = System.Drawing.Color.Gray
-        Me.lnklblReset.Location = New System.Drawing.Point(81, 414)
+        Me.lnklblReset.Location = New System.Drawing.Point(81, 427)
         Me.lnklblReset.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lnklblReset.Name = "lnklblReset"
         Me.lnklblReset.Size = New System.Drawing.Size(100, 16)
@@ -246,7 +246,7 @@ Partial Class frmLoginNew
         Me.lblSignUp.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSignUp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.lblSignUp.LinkColor = System.Drawing.Color.GhostWhite
-        Me.lblSignUp.Location = New System.Drawing.Point(146, 576)
+        Me.lblSignUp.Location = New System.Drawing.Point(135, 576)
         Me.lblSignUp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSignUp.Name = "lblSignUp"
         Me.lblSignUp.Size = New System.Drawing.Size(311, 19)
@@ -262,7 +262,7 @@ Partial Class frmLoginNew
         Me.lblCopyright.Font = New System.Drawing.Font("Century Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCopyright.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.lblCopyright.LinkColor = System.Drawing.Color.Black
-        Me.lblCopyright.Location = New System.Drawing.Point(173, 574)
+        Me.lblCopyright.Location = New System.Drawing.Point(159, 574)
         Me.lblCopyright.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCopyright.Name = "lblCopyright"
         Me.lblCopyright.Size = New System.Drawing.Size(331, 21)
