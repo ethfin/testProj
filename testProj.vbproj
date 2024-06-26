@@ -136,36 +136,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common.vb" />
-    <Compile Include="frmLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.vb">
-      <DependentUpon>frmLogin.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmLoginNew.Designer.vb">
       <DependentUpon>frmLoginNew.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLoginNew.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSignUp.Designer.vb">
-      <DependentUpon>frmSignUp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmSignUp.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReset.Designer.vb">
-      <DependentUpon>frmReset.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmReset.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -186,20 +160,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLoginNew.resx">
       <DependentUpon>frmLoginNew.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSignUp.resx">
-      <DependentUpon>frmSignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReset.resx">
-      <DependentUpon>frmReset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
