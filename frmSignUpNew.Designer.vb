@@ -50,6 +50,7 @@ Partial Class frmSignUpNew
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
         Me.Guna2Panel1.Controls.Add(Me.txtUsername)
         Me.Guna2Panel1.Controls.Add(Me.btnSignUp)
         Me.Guna2Panel1.Controls.Add(Me.txtReenterPassword)
@@ -65,7 +66,8 @@ Partial Class frmSignUpNew
         '
         'txtUsername
         '
-        Me.txtUsername.BorderRadius = 4
+        Me.txtUsername.BorderColor = System.Drawing.Color.Gray
+        Me.txtUsername.BorderRadius = 2
         Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtUsername.DefaultText = ""
         Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -75,18 +77,18 @@ Partial Class frmSignUpNew
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.Location = New System.Drawing.Point(184, 305)
+        Me.txtUsername.Location = New System.Drawing.Point(48, 176)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.PlaceholderText = "Username"
         Me.txtUsername.SelectedText = ""
-        Me.txtUsername.Size = New System.Drawing.Size(240, 36)
+        Me.txtUsername.Size = New System.Drawing.Size(518, 36)
         Me.txtUsername.TabIndex = 29
         '
         'btnSignUp
         '
-        Me.btnSignUp.BorderRadius = 10
+        Me.btnSignUp.BorderRadius = 2
         Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -94,7 +96,7 @@ Partial Class frmSignUpNew
         Me.btnSignUp.FillColor = System.Drawing.Color.MediumSeaGreen
         Me.btnSignUp.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(217, 358)
+        Me.btnSignUp.Location = New System.Drawing.Point(216, 393)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(180, 45)
         Me.btnSignUp.TabIndex = 28
@@ -102,7 +104,8 @@ Partial Class frmSignUpNew
         '
         'txtReenterPassword
         '
-        Me.txtReenterPassword.BorderRadius = 4
+        Me.txtReenterPassword.BorderColor = System.Drawing.Color.Gray
+        Me.txtReenterPassword.BorderRadius = 2
         Me.txtReenterPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtReenterPassword.DefaultText = ""
         Me.txtReenterPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -112,18 +115,19 @@ Partial Class frmSignUpNew
         Me.txtReenterPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtReenterPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtReenterPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtReenterPassword.Location = New System.Drawing.Point(184, 261)
+        Me.txtReenterPassword.Location = New System.Drawing.Point(310, 254)
         Me.txtReenterPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtReenterPassword.Name = "txtReenterPassword"
         Me.txtReenterPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtReenterPassword.PlaceholderText = "Re-enter Password"
         Me.txtReenterPassword.SelectedText = ""
-        Me.txtReenterPassword.Size = New System.Drawing.Size(240, 36)
+        Me.txtReenterPassword.Size = New System.Drawing.Size(256, 36)
         Me.txtReenterPassword.TabIndex = 27
         '
         'txtPassword
         '
-        Me.txtPassword.BorderRadius = 4
+        Me.txtPassword.BorderColor = System.Drawing.Color.Gray
+        Me.txtPassword.BorderRadius = 2
         Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPassword.DefaultText = ""
         Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -133,18 +137,19 @@ Partial Class frmSignUpNew
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(184, 217)
+        Me.txtPassword.Location = New System.Drawing.Point(48, 254)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
-        Me.txtPassword.Size = New System.Drawing.Size(240, 36)
+        Me.txtPassword.Size = New System.Drawing.Size(256, 36)
         Me.txtPassword.TabIndex = 26
         '
         'txtEmail
         '
         Me.txtEmail.BorderColor = System.Drawing.Color.Gray
+        Me.txtEmail.BorderRadius = 2
         Me.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtEmail.DefaultText = ""
         Me.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -154,7 +159,7 @@ Partial Class frmSignUpNew
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(48, 117)
+        Me.txtEmail.Location = New System.Drawing.Point(48, 132)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -166,6 +171,7 @@ Partial Class frmSignUpNew
         'txtLastName
         '
         Me.txtLastName.BorderColor = System.Drawing.Color.Gray
+        Me.txtLastName.BorderRadius = 2
         Me.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtLastName.DefaultText = ""
         Me.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -175,7 +181,7 @@ Partial Class frmSignUpNew
         Me.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastName.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLastName.Location = New System.Drawing.Point(310, 48)
+        Me.txtLastName.Location = New System.Drawing.Point(310, 63)
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -187,6 +193,7 @@ Partial Class frmSignUpNew
         'txtFirstName
         '
         Me.txtFirstName.BorderColor = System.Drawing.Color.Gray
+        Me.txtFirstName.BorderRadius = 2
         Me.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFirstName.DefaultText = ""
         Me.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -196,7 +203,7 @@ Partial Class frmSignUpNew
         Me.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstName.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFirstName.Location = New System.Drawing.Point(48, 48)
+        Me.txtFirstName.Location = New System.Drawing.Point(48, 63)
         Me.txtFirstName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
